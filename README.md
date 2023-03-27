@@ -1,7 +1,7 @@
 # 2023EBU6305G19
 # EBU6305
-## Group Number:2023EBU6305G19
-## Project Title:
+## Group Number: 2023EBU6305G19
+## Project Title: Travel Chongqing
 ## Members:
 ### Li Minghao, 2020213042,200977652, jp2020213042@qmul.ac.uk
 ### Gong Xukang, 2020213158, 200977179, jp2020213158@qmual.ac.uk
