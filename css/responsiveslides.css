@@ -31,7 +31,7 @@
 .slider-info {
 	position: absolute;
 	top: 173px;
-	left: 25%;  /*ksr修改过*/
+	left: 30%;  /*jimmy修改过*/
 	text-align: center;
 	-webkit-transition: background 0.2s ease;
     -moz-transition: background 0.2s ease;
