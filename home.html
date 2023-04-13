@@ -32,7 +32,6 @@
 						<li><a href="gettingaround.html">Getting Around</a></li>
 						<li><a href="food&drink.html">Food&Drink</a></li>
 						<li><a href="accommodation.html">Accommodation</a></li>
-						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
 				<div class="clear"> </div>
@@ -48,19 +47,19 @@
 					      	<img src="images/Nightscape.jpg" style="height: 400;width: 1280;"  alt="">
 					      	<div class="slider-info">
 					      		<p style="color: bisque;font-size: 100;">Heading for Chong Qing!!</p>		<!-- 改了标题字-->
-					      		<a href="#" style="display: inline-block; margin-top: 500px;font-size: larger;">ReadMore</a><!--改了herf的位置-->
+					      		<a href="AboutChongQing.html" style="display: inline-block; margin-top: 500px;font-size: larger;">ReadMore</a><!--改了herf的位置-->
 					      	</div>
 					      </li>
 					      <li><img src="images/Fullscape.jpg"  style="height: 400;width: 1280;" alt="">
 					      	<div class="slider-info">
 					      		<p style="color: bisque;font-size: 100;">Heading for Chong Qing!!</p>
-					      		<a href="#" style="display: inline-block; margin-top: 500px; font-size: larger;">ReadMore</a>
+					      		<a href="AboutChongQing.html" style="display: inline-block; margin-top: 500px; font-size: larger;">ReadMore</a>
 					      	</div>
 					      </li>
 					      <li><img src="images/Ropeway.jpg"  style="height: 400;width: 1280;" alt="">
 					      	<div class="slider-info">
 					      		<p style="color: bisque;font-size: 100;">Heading for Chong Qing!!</p>
-					      		<a href="#" style="display: inline-block; margin-top: 500px;font-size: larger;">ReadMore</a>
+					      		<a href="AboutChongQing.html" style="display: inline-block; margin-top: 500px;font-size: larger;">ReadMore</a>
 					      	</div>
 					      </li>
 					    </ul>
@@ -74,26 +73,56 @@
 			<div class="wrap">
 			<div class="content-grids">
 				<div class="grid">
-					<a href="#"><img src="images/Hongya Cave.jpg" height="300" width="500" title="Hongya Cave" /></a>
-					<h3>DESTINATION</h3>
+					<a><img src="images/Hongya Cave.jpg" height="300" width="500" title="Hongya Cave" /></a>
+					<h3>Destinations</h3>
 					<p>You can view the popular destinations here</p>
-					<a class="button" href="#">More</a>
+					<a class="button" href="gettingaround.html">More</a>
 				</div>
 				<div class="grid">
-					<a href="#"><img src="images/government.jpg" height="300" width="500" title="Government" /></a>
+					<a><img src="images/government.jpg" height="300" width="500" title="Government" /></a>
 					<h3>Policy</h3>
-					<p>Enter this page and grasp the latest travelling policy</p>
-					<a class="button" href="#">More</a>
+					<p>Enter this page to grasp the latest travelling policy</p>
+					<a class="button" href="http://whlyw.cq.gov.cn/zwgk_221/" target="_blank">More</a>
 				</div>
 				<div class="grid last-grid">
-					<a href="#"><img src="images/Sky.jpg" height="260" width="500" title="Sky" /></a>
+					<span id="weather detail" style="display: none;">
+						<table style="line-height: 0.7px;margin-top: 4px;">
+							<tr>
+							  <td><img src="images/Wind.png" alt="Wind" height="20" width="30"></td>
+							  <td style="padding-left: 50px;"><p>Force Two</p></td>
+							</tr>
+							<tr>
+							  <td><img src="images/Humidity.png" alt="Humidity" height="20" width="30"></td>
+							  <td style="padding-left: 50px;"><p>Relative Humidity: 50%</p></td>
+							</tr>
+							<tr>
+							  <td><img src="images/AQI.png" alt="AQI" height="20" width="30"></td>
+							  <td style="padding-left: 50px;"><p>Air Quality Index: 74 Good</p></td>
+							</tr>
+							<tr>
+							  <td><img src="images/Sunrise.png" alt="Sunrise" height="20" width="30"></td>
+							  <td style="padding-left: 50px;"><p>Sunrise: 06:32</p></td>
+							</tr>
+							<tr>
+							  <td><img src="images/Sunset.png" alt="Sunset" height="20" width="30"></td>
+							  <td style="padding-left: 50px;"><p>Sunset: 19:17</p></td>
+							</tr>
+							<tr>
+								<td><img src="images/Clothes.png" alt="Clothing" height="20" width="30"></td>
+								<td style="padding-left: 50px;"><p>Clothing Tips: Summer Clothes, Thin Jacket at Night</p></td>
+								<td height="65"></td>
+							</tr>
+							
+						  </table>
+					</span>
+					<a><img src="images/Sky.jpg" style="display: inline;" height="260" width="500" title="Sky" id="Bluesky"/></a>
 					<h3>Weather</h3>
 					<span>Tempreture:25-30 degrees Celsius<hr><!--插入气温值-->
 						<div class="weather">
 							<p>Sunny<img src="images/sunny.png" alt="weather" style="float: right; width: 10%;height: 10%;"></p><!--插入天气的图片-->
 						</div>
 					</span>
-					<a class="button" href="#">More</a>
+					<a class="button" href="#" id="show weather" onclick="replaceImageAndText()">More</a>
 				</div>
 				<div class="clear"> </div>
 			</div>
@@ -164,6 +193,24 @@
 				</div>
 			</div>
 			<!---End-footer---->
+			<script>
+				function replaceImageAndText(){
+					var link=document.getElementById("show weather");
+					var text=document.getElementById("weather detail");
+					var image=document.getElementById("Bluesky");
+
+					if (image.style.display === "none") {
+    					image.style.display = "inline";
+    					text.style.display = "none";
+    					link.innerHTML = "More";
+ 					} else {
+    					image.style.display = "none";
+    					text.style.display = "inline";
+    					link.innerHTML = "Back";
+  					}
+				}
+			</script>
 </body>
 </html>
+
 
