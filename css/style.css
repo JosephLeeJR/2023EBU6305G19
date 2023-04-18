@@ -61,8 +61,6 @@ img{max-width:100%;}
 	background:url(../images/content-bg.png);
 }
 .content-grids {
-	display: flex;
-	justify-content: space-between;
 	padding: 60px 0;
 }
 .grid{
@@ -133,7 +131,6 @@ img{max-width:100%;}
 }
 /*----special-grid------*/
 .special-grid {
-	
 	float: left;
 	width: 32%;
 	margin-right: 2%;
@@ -317,7 +314,6 @@ img{max-width:100%;}
 	width: 90%;
 	margin: 0 auto;
 }
-
 .services-grid{
 	width:25%;
 	float:left;
